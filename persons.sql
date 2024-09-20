@@ -1,3 +1,5 @@
+drop table if exists persons;
+
 create table persons (
 	id INT,
 	first_name VARCHAR(50),
@@ -5,6 +7,7 @@ create table persons (
 	email VARCHAR(50),
 	gender VARCHAR(50)
 );
+
 insert into persons (id, first_name, last_name, email, gender) values (1, 'Dianne', 'Dilrew', 'ddilrew0@wikimedia.org', 'Female');
 insert into persons (id, first_name, last_name, email, gender) values (2, 'Virge', 'Witham', 'vwitham1@cmu.edu', 'Male');
 insert into persons (id, first_name, last_name, email, gender) values (3, 'Ingamar', 'Biaggioni', 'ibiaggioni2@theatlantic.com', 'Male');
