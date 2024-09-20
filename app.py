@@ -18,8 +18,8 @@ def create_person():
     data = request.json
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute('INSERT INTO public.persons (first_name, last_name, email, gender) VALUES (%s, %s, %s, %s)',
-                (data['first_name'], data['last_name'], data['email'], data['gender']))
+    cur.execute('INSERT INTO public.persons (id, first_name, last_name, email, gender) VALUES (%s,%s, %s, %s, %s)',
+                (data['id'], data['first_name'], data['last_name'], data['email'], data['gender']))
     conn.commit()
     cur.close()
     conn.close()
